@@ -107,7 +107,7 @@ function Engine(db, _options={}) {
 		}
 		// console.log(keys.concat(tagKeys))
 		let results = await union(keys.concat(tagKeys))
-		results = results.filter(x => Object.keys(x.matches).length>keywords.length*0.5)
+		results = results.filter(x => Object.keys(x.matches).length>=keywords.length*0.6)
 		// let tagResults = await union(tagKeys)
 		// results = tagResults.concat(results)
 		
